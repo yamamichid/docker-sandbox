@@ -268,6 +268,31 @@ $ docker image ls
 REPOSITORY                        TAG       IMAGE ID       CREATED          SIZE
 ```
 
+## Exec
+```sh
+$ docker run stop:1.0
+
+```
+Open new terminal
+
+```sh
+$ docker ps
+CONTAINER ID   IMAGE      COMMAND            CREATED          STATUS          PORTS     NAMES
+f8eda05e46e9   stop:1.0   "sleep infinity"   36 seconds ago   Up 35 seconds             friendly_lamport
+```
+
+```bash
+$ docker exec -it friendly_lamport /bin/bash
+root@f8eda05e46e9:/# 
+```
+
+```sh
+root@f8eda05e46e9:/# exit
+exit
+$ 
+```
+
+
 # Docker compose
 
 ## up
@@ -350,4 +375,3 @@ $ docker image ls
 REPOSITORY                        TAG       IMAGE ID       CREATED          SIZE
 docker-sandbox_hello              latest    ff87b7a2ec4a   55 minutes ago   72.8MB
 ```
-
