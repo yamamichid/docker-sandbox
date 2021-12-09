@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+
+RUN echo Stop example
+
+CMD ["sleep", "infinity"]
